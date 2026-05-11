@@ -1,5 +1,8 @@
 fileVersion: 1
 id: "34"
-mappingDefinitions: {}
+mappingDefinitions:
+  SRC:
+    database: JARRED_SANDBOX
+    schema: DEV
 name: DEV
 type: Environment
