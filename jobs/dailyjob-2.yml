@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "2"
+includeSelector: "{ subgraph: \"EVENT_RPT\" } OR { location: \"SRC\" name: \"V_CUSTOMERS\" } OR { location: \"SRC\" name: \"V_EVENTS\" } OR { location: \"SRC\" name: \"V_TRANSACTIONS\" }"
+name: daily job
+type: Job
