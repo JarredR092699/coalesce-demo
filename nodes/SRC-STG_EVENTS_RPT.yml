@@ -1,0 +1,303 @@
+fileVersion: 1
+id: c40347a3-055e-4f12-adb5-d705da564478
+name: STG_EVENTS_RPT
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fe65cf1b-a37a-4034-b67b-a2a59f598eb3
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: TRANSACTION_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c3a68840-8951-400d-b34b-5546403feedb
+                stepCounter: 0f98c577-4762-4e92-a8e6-c050e9edba6a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fd04d0b9-df3f-4cf3-9251-b1c28d6868ed
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 97c788e1-8a59-426a-8549-e56615a7b046
+                stepCounter: 0f98c577-4762-4e92-a8e6-c050e9edba6a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: dabfea39-ff4f-4e79-b65c-c87a91d9e6ed
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5f584eb3-aae2-47a5-a032-50a51f31713c
+                stepCounter: 0f98c577-4762-4e92-a8e6-c050e9edba6a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3b6dcfa5-b3dd-40fb-9e50-863e9529a4d1
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: TRANSACTION_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 27116697-01dc-4e01-91a7-7573258e9e2f
+                stepCounter: 0f98c577-4762-4e92-a8e6-c050e9edba6a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f7095d7-63ad-4fc4-bc43-c5f2cdb70989
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: VARCHAR(20)
+        description: ""
+        name: PAYMENT_METHOD
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 81a60308-134e-4080-8e8a-89dfe084c884
+                stepCounter: 0f98c577-4762-4e92-a8e6-c050e9edba6a
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3ad4eca2-866f-4479-a335-f94691270b91
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7dfec9ed-b5f6-4952-9286-393c261f7617
+                stepCounter: ba0bce7e-dfa2-4cc8-afcf-d63659599980
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 69f810fb-578c-46bb-8fe2-cad0b589fae9
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: FIRST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4da71903-4ea9-4d9c-8b21-635324f3ac50
+                stepCounter: ba0bce7e-dfa2-4cc8-afcf-d63659599980
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b70194b6-343b-4a4f-afed-3ac0ca85e333
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: LAST_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 93c120f9-5e61-41b9-82d0-916d10d934aa
+                stepCounter: ba0bce7e-dfa2-4cc8-afcf-d63659599980
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 72799b02-8e61-412a-8726-36b9007f775c
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: EMAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 69a1908b-8e7b-4364-ab2a-aeec5228a91b
+                stepCounter: ba0bce7e-dfa2-4cc8-afcf-d63659599980
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 06e303eb-2f8d-4009-a17f-d1d15702f0bf
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: VARCHAR(2)
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2f6c2286-0261-453e-98e9-c8d98660a2a0
+                stepCounter: ba0bce7e-dfa2-4cc8-afcf-d63659599980
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ba204095-8401-4458-b5f9-89a97a57be4e
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: DATE
+        description: ""
+        name: SIGNUP_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 4b51b57f-af3b-4b0e-841a-fa0763636bde
+                stepCounter: ba0bce7e-dfa2-4cc8-afcf-d63659599980
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b061e882-c9a6-476c-af3b-563336ce1a5c
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EVENT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 42082ba9-73e9-4ecc-b547-86cd72e92d3b
+                stepCounter: b1470f69-11fb-47d9-b00c-335580b9c2fc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ee431130-9bbc-455f-bdf1-1ef1ad1167b0
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: EVENT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0b057e59-bf24-4f70-b853-d687cd1b73d9
+                stepCounter: b1470f69-11fb-47d9-b00c-335580b9c2fc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0d278248-9328-4a58-8c40-091227b028f6
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: ARTIST
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 71444c7b-43b3-48b8-a265-86db83230e80
+                stepCounter: b1470f69-11fb-47d9-b00c-335580b9c2fc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: c5138973-989e-4e87-8f8d-732c574e9bfe
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: VENUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 838ac12c-78d3-4573-99e6-ba57460970b5
+                stepCounter: b1470f69-11fb-47d9-b00c-335580b9c2fc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 27767406-92d8-4d26-84f8-dfc3dd90b57f
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1285d6dd-5a60-4ca5-98d7-d4ec1f235ac8
+                stepCounter: b1470f69-11fb-47d9-b00c-335580b9c2fc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4991f40d-9cf5-46f2-960a-8b9af41b6dcc
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: DATE
+        description: ""
+        name: EVENT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3e983494-9ccb-43ee-8d04-cd010e145326
+                stepCounter: b1470f69-11fb-47d9-b00c-335580b9c2fc
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 17524fe7-93a9-46ce-8666-a12f371bca39
+          stepCounter: c40347a3-055e-4f12-adb5-d705da564478
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: TICKET_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 46b1c1da-6867-453c-922f-b12a60406d59
+                stepCounter: b1470f69-11fb-47d9-b00c-335580b9c2fc
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          V_CUSTOMERS: ba0bce7e-dfa2-4cc8-afcf-d63659599980
+          V_EVENTS: b1470f69-11fb-47d9-b00c-335580b9c2fc
+          V_TRANSACTIONS: 0f98c577-4762-4e92-a8e6-c050e9edba6a
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: V_CUSTOMERS
+          - locationName: SRC
+            nodeName: V_EVENTS
+          - locationName: SRC
+            nodeName: V_TRANSACTIONS
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC', 'V_TRANSACTIONS') }} "V_TRANSACTIONS"
+            LEFT JOIN {{ ref('SRC', 'V_CUSTOMERS') }} "V_CUSTOMERS"
+            ON "V_TRANSACTIONS"."CUSTOMER_ID" = "V_CUSTOMERS"."CUSTOMER_ID"
+            LEFT JOIN {{ ref('SRC', 'V_EVENTS') }} "V_EVENTS"
+            ON "V_TRANSACTIONS"."EVENT_ID" = "V_EVENTS"."EVENT_ID"
+        name: STG_EVENTS_RPT
+        noLinkRefs: []
+  name: STG_EVENTS_RPT
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
