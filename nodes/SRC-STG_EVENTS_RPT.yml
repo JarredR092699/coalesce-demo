@@ -269,10 +269,7 @@ operation:
               - columnCounter: 46b1c1da-6867-453c-922f-b12a60406d59
                 stepCounter: b1470f69-11fb-47d9-b00c-335580b9c2fc
             transform: ""
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: d251e0a9-eb87-4745-8edb-a4f74f002096
           stepCounter: c40347a3-055e-4f12-adb5-d705da564478
@@ -280,17 +277,18 @@ operation:
         dataType: NUMBER(10,2)
         defaultValue: ""
         description: ""
-        keyColumnType: None
         name: COST_PER_TICKET
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
-            transform: "\"V_TRANSACTIONS\".\"AMOUNT\" / (\"V_TRANSACTIONS\".\"QUANTITY\" - \"V_TRANSACTIONS\".\"QUANTITY\")"
-        systemColumnType: None
+              - columnCounter: 97c788e1-8a59-426a-8549-e56615a7b046
+                stepCounter: 0f98c577-4762-4e92-a8e6-c050e9edba6a
+            transform: "\"V_TRANSACTIONS\".\"AMOUNT\" / NULLIF(\"V_TRANSACTIONS\".\"QUANTITY\", 0)"
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           V_CUSTOMERS: ba0bce7e-dfa2-4cc8-afcf-d63659599980
@@ -318,6 +316,7 @@ operation:
   overrideSQL: false
   schema: ""
   sqlType: Stage
+  table: STG_EVENTS_RPT
   type: sql
   version: 1
 type: Node
