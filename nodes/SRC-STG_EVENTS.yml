@@ -1,0 +1,152 @@
+fileVersion: 1
+id: bbd70630-345a-4dc6-a10b-13c64a6f4bd6
+name: STG_EVENTS
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: SRC
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ba521f0f-f052-4e9d-b927-8acb1809fb0e
+          stepCounter: bbd70630-345a-4dc6-a10b-13c64a6f4bd6
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: EVENT_ID
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a2591558-e96e-45a2-8577-1acb9a7c914a
+                stepCounter: b8b0f0bd-603b-4f4c-b9b3-644346270155
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bd74aa3d-cf56-42a5-b192-5c66f10f09db
+          stepCounter: bbd70630-345a-4dc6-a10b-13c64a6f4bd6
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: EVENT_NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f809aef3-b0d6-4a86-b1e7-3c43aa75284f
+                stepCounter: b8b0f0bd-603b-4f4c-b9b3-644346270155
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 40a145f2-c342-42e2-b157-5f55e9e90a9d
+          stepCounter: bbd70630-345a-4dc6-a10b-13c64a6f4bd6
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: ARTIST
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 63989d9e-175d-4162-9e34-56bdd2004b2d
+                stepCounter: b8b0f0bd-603b-4f4c-b9b3-644346270155
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d43b3a04-cd80-44a7-9a27-e4bfc5cd7bdf
+          stepCounter: bbd70630-345a-4dc6-a10b-13c64a6f4bd6
+        config: {}
+        dataType: VARCHAR(100)
+        description: ""
+        name: VENUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7899b3b7-8cda-439e-9610-9f3b9fa201db
+                stepCounter: b8b0f0bd-603b-4f4c-b9b3-644346270155
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8d75dac4-8ba9-4975-9aac-c418d9eedc2d
+          stepCounter: bbd70630-345a-4dc6-a10b-13c64a6f4bd6
+        config: {}
+        dataType: VARCHAR(50)
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 347bb63e-71d0-4bde-ade3-29f77b1b43ca
+                stepCounter: b8b0f0bd-603b-4f4c-b9b3-644346270155
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f4ffb5bf-c0db-4f6c-af36-b7215a7c1022
+          stepCounter: bbd70630-345a-4dc6-a10b-13c64a6f4bd6
+        config: {}
+        dataType: VARCHAR(2)
+        description: ""
+        name: STATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 378fa666-b478-43e1-a6d6-b65d8bea137a
+                stepCounter: b8b0f0bd-603b-4f4c-b9b3-644346270155
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b334c1a1-7ce3-4da6-b7cc-954500bd9ed4
+          stepCounter: bbd70630-345a-4dc6-a10b-13c64a6f4bd6
+        config: {}
+        dataType: DATE
+        description: ""
+        name: EVENT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f39bb7ab-1599-4fa5-bc05-3008905396a1
+                stepCounter: b8b0f0bd-603b-4f4c-b9b3-644346270155
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8a7872d8-d5a5-4517-a79f-b3ef150dafe1
+          stepCounter: bbd70630-345a-4dc6-a10b-13c64a6f4bd6
+        config: {}
+        dataType: NUMBER(10,2)
+        description: ""
+        name: TICKET_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 00b5d1e2-103a-43a1-93e2-1c61ae3fcaf4
+                stepCounter: b8b0f0bd-603b-4f4c-b9b3-644346270155
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          EVENTS: b8b0f0bd-603b-4f4c-b9b3-644346270155
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: EVENTS
+        join:
+          joinCondition: FROM {{ ref('SRC', 'EVENTS') }} "EVENTS"
+        name: STG_EVENTS
+        noLinkRefs: []
+  name: STG_EVENTS
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
