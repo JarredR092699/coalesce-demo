@@ -115,6 +115,26 @@ operation:
               - columnCounter: 57a04add-fb44-46e6-a2fe-413219c72f1d
                 stepCounter: 2387b47d-df26-44f6-80f4-a2158e9eb175
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9d6c32d9-6e23-438f-aa94-12e014ea327d
+          stepCounter: 5669e5f0-c674-49d3-943a-42616991e525
+        config: {}
+        dataType: DECIMAL(10,2)
+        defaultValue: ""
+        description: ""
+        keyColumnType: None
+        name: COST_PER_TICKET
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "\"TRANSACTIONS\".\"AMOUNT\" / (\"TRANSACTIONS\".\"QUANTITY\" - \"TRANSACTIONS\".\"QUANTITY\")"
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
